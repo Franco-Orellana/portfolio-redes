@@ -1,0 +1,61 @@
+# Configuración completa del switch SW-ACC-01
+
+# Acceso al modo privilegiado
+enable
+
+# Acceso al modo de configuración global
+configure terminal
+
+# Asignación de nombre del switch
+hostname SW-ACC-01
+
+# Creación de VLANs
+vlan 10
+ name ADMIN
+ exit
+
+vlan 20
+ name VEN
+ exit
+
+vlan 30
+ name IT
+ exit
+
+vlan 99
+ name NATIVE
+ exit
+
+# Asignación de puertos a VLAN 10
+interface range fa0/1 - 5
+ switchport mode access
+ switchport access vlan 10
+ exit
+
+# Asignación de puertos a VLAN 20
+interface range fa0/6 - 11
+ switchport mode access
+ switchport access vlan 20
+ exit
+
+# Asignación de puertos a VLAN 30
+interface range fa0/12 - 15
+ switchport mode access
+ switchport access vlan 30
+ exit
+
+# Asignación de puerto troncal
+interface gi0/1
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,99 
+ exit
+
+# Salida del modo de configuración global
+exit
+
+# Guardado de configuración
+copy running-config startup-config 
+
+# Salida del modo privilegiado
+exit

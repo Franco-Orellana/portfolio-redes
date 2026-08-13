@@ -1,0 +1,9 @@
+R-EDGE-01#show ip nat statistics
+Total translations: 0 (0 static, 0 dynamic, 0 extended)
+Outside Interfaces: GigabitEthernet0/1
+Inside Interfaces: GigabitEthernet0/0.10 , GigabitEthernet0/0.20 , GigabitEthernet0/0.30
+Hits: 0  Misses: 0
+Expired translations: 0
+Dynamic mappings:
+
+R-EDGE-01#show ip nat translations

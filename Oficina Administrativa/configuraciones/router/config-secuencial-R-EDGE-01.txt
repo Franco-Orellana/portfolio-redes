@@ -1,0 +1,183 @@
+# Configuración completa del router R-EDGE-01
+
+# Acceso al modo privilegiado
+enable
+
+# Acceso al modo de configuración global
+configure terminal
+
+# Asignación de nombre al router
+hostname R-EDGE-01
+
+# Configuración de subinterfaces
+
+# VLAN 10
+interface gi0/0.10
+ encapsulation dot1q 10
+ ip address 192.168.10.1 255.255.255.0
+ exit
+
+# VLAN 20
+interface gi0/0.20
+ encapsulation dot1q 20
+ ip address 192.168.20.1 255.255.255.0
+ exit
+
+# VLAN 30
+interface gi0/0.30
+ encapsulation dot1q 30
+ ip address 192.168.30.1 255.255.255.0
+ exit
+
+# Interfaz troncal física
+interface gi0/0
+ no shutdown
+ exit
+
+# Salida a Internet
+interface gi0/1
+ ip address 200.1.1.2 255.255.255.252
+ no shutdown
+ exit
+
+# Configuración de DHCP
+
+# Configuración de DHCP VLAN 10
+ip dhcp pool DHCP-ADMIN
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ exit
+
+# Configuración de DHCP VLAN 20
+ip dhcp pool DHCP-VEN
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ exit
+
+# Configuración de DHCP VLAN 30
+ip dhcp pool DHCP-IT
+ network 192.168.30.0 255.255.255.0
+ default-router 192.168.30.1
+ exit
+
+# Exclusión de direcciones en DHCP VLAN 10
+ip dhcp excluded-address 192.168.10.1 192.168.10.20
+
+# Exclusión de direcciones en DHCP VLAN 20
+ip dhcp excluded-address 192.168.20.1 192.168.20.20
+
+# Exclusión de direcciones en DHCP VLAN 30
+ip dhcp excluded-address 192.168.30.1 192.168.30.20
+
+
+# Configuración de restricciones  
+
+# VLAN ADMINISTRACIÓN
+ip access-list extended POLITICA_ADMIN
+
+# ADMIN no puede iniciar comunicaciones hacia VENTAS
+ deny ip 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
+
+# Permitir respuestas TCP a conexiones iniciadas desde IT
+ permit tcp 192.168.10.0 0.0.0.255 192.168.30.0 0.0.0.255 established
+
+# Permitir respuestas ICMP a pings iniciados desde IT
+ permit icmp 192.168.10.0 0.0.0.255 192.168.30.0 0.0.0.255 echo-reply
+
+# Impedir que ADMIN inicie cualquier otro tráfico hacia IT
+ deny ip 192.168.10.0 0.0.0.255 192.168.30.0 0.0.0.255
+
+# Mantener el resto del tráfico permitido
+ permit ip any any
+
+ exit
+
+
+# Asignación de ACL a interfaz 
+interface gi0/0.10
+ ip access-group POLITICA_ADMIN in
+ exit
+
+
+# VLAN VENTAS
+ip access-list extended POLITICA_VENTAS
+
+# VENTAS no puede iniciar comunicaciones hacia ADMIN
+ deny ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+
+# Permitir respuestas TCP a conexiones iniciadas desde IT
+ permit tcp 192.168.20.0 0.0.0.255 192.168.30.0 0.0.0.255 established
+
+# Permitir respuestas ICMP a pings iniciados desde IT
+ permit icmp 192.168.20.0 0.0.0.255 192.168.30.0 0.0.0.255 echo-reply
+
+# Impedir que VENTAS inicie cualquier otro tráfico hacia IT
+ deny ip 192.168.20.0 0.0.0.255 192.168.30.0 0.0.0.255
+
+# Mantener el resto del tráfico permitido
+ permit ip any any
+
+ exit
+
+
+# Asignación de ACL a interfaz 
+interface gi0/0.20
+ ip access-group POLITICA_VENTAS in
+ exit
+
+
+
+# VLAN TECNOLOGÍA
+ip access-list extended POLITICA_IT
+ permit ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
+ permit ip 192.168.30.0 0.0.0.255 192.168.20.0 0.0.0.255
+ permit ip any any
+ exit
+
+
+# Asignación de ACL a interfaz 
+interface gi0/0.30
+ ip access-group POLITICA_IT in
+ exit
+
+
+# Configuración de NAT/PAT
+
+# Configuración ACL para NAT
+access-list 1 permit 192.168.10.0 0.0.0.255
+access-list 1 permit 192.168.20.0 0.0.0.255
+access-list 1 permit 192.168.30.0 0.0.0.255
+
+# PAT
+ip nat inside source list 1 interface gi0/1 overload
+
+# Interfaces pertenecientes a la red interna
+interface gi0/0.10
+ ip nat inside
+ exit
+
+interface gi0/0.20
+ ip nat inside 
+ exit
+
+interface gi0/0.30
+ ip nat inside 
+ exit
+
+
+# Interfaz que conecta con la red externa
+interface gi0/1
+ ip nat outside
+ exit
+
+# Ruta por defecto hacia ISP
+ip route 0.0.0.0 0.0.0.0 gi0/1
+ 
+# Salida del modo de configuración global
+exit
+
+# Guardado de configuración
+copy running-config startup-config
+
+# Salida del modo privilegiado
+exit

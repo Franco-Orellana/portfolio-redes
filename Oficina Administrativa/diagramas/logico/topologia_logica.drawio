@@ -1,0 +1,50 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="9s3Vz73ZnrI5Pom9GUOv">
+    <mxGraphModel dx="852" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-1" parent="1" style="rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="R-EDGE-01&#xa;(Router-on-a-Stick/DHCP)&#xa;GI0/0.10 → VLAN 10&#xa;GI0/0.20 → VLAN 20&#xa;GI0/0.30 → VLAN 30" vertex="1">
+          <mxGeometry height="100" width="180" x="331.99" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4ey87_JbYcFe2j8jbpI_-5" edge="1" parent="1" source="m3NsgHRPHk6Ov4zuQVMO-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.508;exitY=0.996;exitDx=0;exitDy=0;exitPerimeter=0;" target="m3NsgHRPHk6Ov4zuQVMO-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ey87_JbYcFe2j8jbpI_-6" edge="1" parent="1" source="m3NsgHRPHk6Ov4zuQVMO-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="m3NsgHRPHk6Ov4zuQVMO-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-5" parent="1" style="rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="SW-ACC-01" vertex="1">
+          <mxGeometry height="60" width="180" x="331.99" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-6" edge="1" parent="1" source="m3NsgHRPHk6Ov4zuQVMO-1" style="endArrow=block;" target="m3NsgHRPHk6Ov4zuQVMO-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-7" connectable="0" parent="m3NsgHRPHk6Ov4zuQVMO-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="802.1Q TRUNK LINK&lt;div&gt;&lt;div&gt;Native VLAN: 99&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Allowed VLANs: 10,20,30&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3236" y="-2" as="geometry">
+            <mxPoint x="2" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-8" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;VLAN 20 - VEN&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;192.168.20.0/24&lt;br&gt;GW 192.168.20.1&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="333.36" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-9" edge="1" parent="1" source="m3NsgHRPHk6Ov4zuQVMO-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;endArrow=classic;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="m3NsgHRPHk6Ov4zuQVMO-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="191.98999999999978" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-10" edge="1" parent="1" source="m3NsgHRPHk6Ov4zuQVMO-11" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="m3NsgHRPHk6Ov4zuQVMO-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-11" parent="1" style="rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" value="WAN / ISP" vertex="1">
+          <mxGeometry height="60" width="180" x="331.99" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-12" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;VLAN 30 - IT&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;192.168.30.0/24&lt;br&gt;GW 192.168.30.1&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="532.86" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="m3NsgHRPHk6Ov4zuQVMO-13" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;VLAN 10 - ADMIN&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;192.168.10.0/24&lt;br&gt;GW 192.168.10.1&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="131.11" y="480" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

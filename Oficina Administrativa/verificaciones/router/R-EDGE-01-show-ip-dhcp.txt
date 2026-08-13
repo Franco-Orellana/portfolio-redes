@@ -1,0 +1,57 @@
+R-EDGE-01#show ip dhcp pool
+
+Pool DHCP-ADMIN :
+ Utilization mark (high/low)    : 100 / 0
+ Subnet size (first/next)       : 0 / 0 
+ Total addresses                : 254
+ Leased addresses               : 0
+ Excluded addresses             : 3
+ Pending event                  : none
+
+ 1 subnet is currently in the pool
+ Current index        IP address range                    Leased/Excluded/Total
+ 192.168.10.1         192.168.10.1     - 192.168.10.254    0    / 3     / 254
+
+Pool DHCP-VEN :
+ Utilization mark (high/low)    : 100 / 0
+ Subnet size (first/next)       : 0 / 0 
+ Total addresses                : 254
+ Leased addresses               : 6
+ Excluded addresses             : 3
+ Pending event                  : none
+
+ 1 subnet is currently in the pool
+ Current index        IP address range                    Leased/Excluded/Total
+ 192.168.20.1         192.168.20.1     - 192.168.20.254    6    / 3     / 254
+
+Pool DHCP-IT :
+ Utilization mark (high/low)    : 100 / 0
+ Subnet size (first/next)       : 0 / 0 
+ Total addresses                : 254
+ Leased addresses               : 4
+ Excluded addresses             : 3
+ Pending event                  : none
+
+ 1 subnet is currently in the pool
+ Current index        IP address range                    Leased/Excluded/Total
+ 192.168.30.1         192.168.30.1     - 192.168.30.254    4    / 3     / 254
+
+
+R-EDGE-01#show ip dhcp binding
+IP address       Client-ID/              Lease expiration        Type
+                 Hardware address
+192.168.10.21    0040.0B8E.9240           --                     Automatic
+192.168.10.22    00E0.F776.0650           --                     Automatic
+192.168.10.23    00E0.F98A.2436           --                     Automatic
+192.168.10.24    00D0.BC41.7537           --                     Automatic
+192.168.10.25    00E0.F7CB.63BC           --                     Automatic
+192.168.20.21    00D0.FF23.88C5           --                     Automatic
+192.168.20.22    0001.4355.5BC0           --                     Automatic
+192.168.20.23    00D0.5849.A1C0           --                     Automatic
+192.168.20.24    0001.6483.6011           --                     Automatic
+192.168.20.25    0001.42C3.8BC0           --                     Automatic
+192.168.20.26    0001.43B4.D72C           --                     Automatic
+192.168.30.21    0001.6355.6E68           --                     Automatic
+192.168.30.22    000C.85C5.1564           --                     Automatic
+192.168.30.23    0060.7027.A12A           --                     Automatic
+192.168.30.24    00D0.FF12.9D67           --                     Automatic
