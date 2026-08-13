@@ -105,4 +105,4 @@ Los criterios considerados incluyen:
 
 ⬅️ Anterior: [***Requerimientos funcionales***](../requerimientos/requerimientos.md)
 
-➡️ Siguiente: [***Diseño de VLAN***](./VLAN.md)
+➡️ Siguiente: [***Diseño de VLAN***](./02-VLAN.md)

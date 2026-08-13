@@ -1,8 +1,6 @@
 🏠 [Volver al inicio](../../README.md#-índice-de-documentación)
 
-# Enrutamiento
-
-Enrutamiento
+# Diseño de enrutamiento
 
 El enrutamiento de la infraestructura se centralizó en el router perimetral R-EDGE-01, el cual desempeña dos funciones principales: proporcionar el enrutamiento inter-VLAN entre las redes internas y actuar como puerta de enlace hacia redes externas mediante el enlace WAN.
 
@@ -42,6 +40,6 @@ Con este propósito, se configuró una ruta estática por defecto (0.0.0.0/0), l
 <br>
 <br> 
 
-⬅️ Anterior: [***Diseño de servicio DHCP***](./DHCP.md)
+⬅️ Anterior: [***Diseño de servicio DHCP***](./04-DHCP.md)
 
-➡️ Siguiente: [***Diseño de seguridad***](./seguridad.md)
+➡️ Siguiente: [***Diseño de seguridad***](./06-seguridad.md)

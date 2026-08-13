@@ -40,6 +40,6 @@ El siguiente archivo contiene la verificación del funcionamiento de NAT/PAT med
 <br>
 <br> 
 
-⬅️ Anterior: [***Pruebas de funcionamiento***](../validacion/README.md)
+⬅️ Anterior: [***Plan de validación***](../validacion/README.md)
 
 ➡️ Siguiente: [***Verificación de la configuración implementada en SW-ACC-01***](./verificacion-SW-ACC-01.md)

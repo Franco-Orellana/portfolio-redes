@@ -18,6 +18,6 @@ Se configuró un pool DHCP para cada VLAN. Cada pool contiene la información ne
 <br>
 <br> 
 
-⬅️ Anterior: [***Diseño de direccionamiento IP***](./direccionamiento-IP.md)
+⬅️ Anterior: [***Diseño de direccionamiento IP***](./03-direccionamiento-IP.md)
 
-➡️ Siguiente: [***Diseño de enrutamiento***](./enrutamiento.md)
+➡️ Siguiente: [***Diseño de enrutamiento***](./05-enrutamiento.md)

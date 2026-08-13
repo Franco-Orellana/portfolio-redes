@@ -90,6 +90,6 @@ Centralizar estas funciones en un único dispositivo simplifica la administraci�
 <br>
 
 
-⬅️ Anterior: [***Diseño de enrutamiento***](./enrutamiento.md)
+⬅️ Anterior: [***Diseño de enrutamiento***](./05-enrutamiento.md)
 
 ➡️ Siguiente: [***Secuencia de configuración Cisco IOS***](../implementacion/config-cisco-ios.md)

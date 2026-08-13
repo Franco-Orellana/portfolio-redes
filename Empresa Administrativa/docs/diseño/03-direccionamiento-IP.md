@@ -28,6 +28,6 @@ Finalmente, el diseño contempla la implementación de una VLAN nativa dedicada 
 <br>
 <br> 
 
-⬅️ Anterior: [***Diseño de VLAN***](./VLAN.md)
+⬅️ Anterior: [***Diseño de VLAN***](./02-VLAN.md)
 
-➡️ Siguiente: [***Diseño de servicio DHCP***](./DHCP.md)
+➡️ Siguiente: [***Diseño de servicio DHCP***](./04-DHCP.md)

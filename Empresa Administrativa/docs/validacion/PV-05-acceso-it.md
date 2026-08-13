@@ -44,7 +44,7 @@ Approximate round trip times in milli-seconds:
 ---------
  
 
-## Prueba 2 (WS-IT-04 a WS-VENTAS-04): 
+## Prueba 2 (WS-IT-04 a WS-VEN-04): 
 
 **Comando:**  
   

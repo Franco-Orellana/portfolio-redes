@@ -37,7 +37,7 @@ Una vez finalizada la implementación de la red, se realizaron distintas pruebas
 
 ### Validación
 
-* [Pruebas de funcionamiento](./docs/validacion/README.md)
+* [Plan de validación](./docs/validacion/README.md)
 
 ### Anexos
  

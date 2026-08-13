@@ -40,6 +40,6 @@
 <br>
 <br> 
 
-⬅️ Anterior: [***Pruebas de funcionamiento***](./README.md)
+⬅️ Anterior: [***Plan de validación***](./README.md#verificación-de-la-infraestructura)
 
 ➡️ Siguiente: [***Segmentación y aislamiento entre VLAN***](./PV-02-segmentacion-vlan.md)

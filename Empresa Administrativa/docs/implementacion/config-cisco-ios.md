@@ -11,6 +11,6 @@ La siguiente documentación contiene la secuencia de comandos aplicada para la c
 <br>
 <br> 
 
-⬅️ Anterior: [***Diseño de seguridad***](../diseño/seguridad.md)
+⬅️ Anterior: [***Diseño de seguridad***](../diseño/06-seguridad.md)
 
-➡️ Siguiente: [***Pruebas de funcionamiento***](../validacion/README.md)
+➡️ Siguiente: [***Plan de validación***](../validacion/README.md)

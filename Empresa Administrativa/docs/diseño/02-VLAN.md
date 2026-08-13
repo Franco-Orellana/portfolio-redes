@@ -18,6 +18,6 @@ La distribución de VLAN definida es la siguiente:
 <br>
 <br> 
 
-⬅️ Anterior: [***Arquitectura de la red***](./arquitectura-red.md)
+⬅️ Anterior: [***Arquitectura de la red***](./01-arquitectura-red.md)
 
-➡️ Siguiente: [***Diseño de direccionamiento IP***](./direccionamiento-IP.md)
+➡️ Siguiente: [***Diseño de direccionamiento IP***](./03-direccionamiento-IP.md)

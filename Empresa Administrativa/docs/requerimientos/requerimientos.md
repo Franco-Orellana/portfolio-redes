@@ -21,4 +21,4 @@ A partir del análisis de las necesidades de la organización, se definieron los
 
 ⬅️ Anterior: [***Inicio***](../../README.md)
 
-➡️ Siguiente: [***Arquitectura de la red***](../diseño/arquitectura-red.md)
+➡️ Siguiente: [***Arquitectura de la red***](../diseño/01-arquitectura-red.md)
